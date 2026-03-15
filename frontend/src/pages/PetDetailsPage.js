@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
@@ -10,11 +10,7 @@ const PetDetailsPage = () => {
   const [error, setError] = useState(null);
   const [showAdoptForm, setShowAdoptForm] = useState(false);
 
-  useEffect(() => {
-    fetchPet();
-  }, [id]);
-
-  const fetchPet = async () => {
+  const fetchPet = useCallback(async () => {
     try {
       setLoading(true);
       const response = await axios.get(`/api/pets/${id}`);
@@ -26,7 +22,11 @@ const PetDetailsPage = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
+
+  useEffect(() => {
+    fetchPet();
+  }, [fetchPet]);
 
   const handleAdoptClick = () => {
     setShowAdoptForm(!showAdoptForm);

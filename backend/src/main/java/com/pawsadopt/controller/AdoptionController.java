@@ -3,10 +3,14 @@ package com.pawsadopt.controller;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 
 import com.pawsadopt.controller.AdoptionRequestDTO;
+import com.pawsadopt.model.Adoption;
 import com.pawsadopt.model.Pet;
 import com.pawsadopt.model.User;
+import com.pawsadopt.service.AdoptionService;
 import com.pawsadopt.service.PetService;
 import com.pawsadopt.service.UserService;
 

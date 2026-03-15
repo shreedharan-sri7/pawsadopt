@@ -1,7 +1,9 @@
 package com.pawsadopt;
 
 import com.pawsadopt.model.User;
+import com.pawsadopt.model.Pet;
 import com.pawsadopt.repository.UserRepository;
+import com.pawsadopt.repository.PetRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
