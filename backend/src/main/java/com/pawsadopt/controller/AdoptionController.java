@@ -1,5 +1,9 @@
 package com.pawsadopt.controller;
 
+import org.springframework.web.bind.annotation.*;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.pawsadopt.controller.AdoptionRequestDTO;
 import com.pawsadopt.model.Pet;
 import com.pawsadopt.model.User;
