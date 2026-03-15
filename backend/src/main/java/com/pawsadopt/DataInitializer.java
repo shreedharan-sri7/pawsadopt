@@ -19,6 +19,7 @@ public class DataInitializer {
             user.setName("Default User");
             user.setEmail("user@example.com");
             user.setPassword("password"); // In real app, hash this
+            user.setPhone("1234567890");
             userRepository.save(user);
 
             System.out.println("Sample user initialized successfully!");
