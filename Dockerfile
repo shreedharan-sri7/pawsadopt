@@ -17,8 +17,8 @@ RUN mkdir -p /app/backend/src/main/resources/static
 RUN cp -r build/* /app/backend/src/main/resources/static/
 
 # Copy backend and build
-COPY backend /app/backend
-WORKDIR /app/backend
+COPY backend /app
+WORKDIR /app
 RUN mvn clean package -DskipTests
 
 # Expose port
